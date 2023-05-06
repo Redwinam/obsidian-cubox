@@ -1,0 +1,22 @@
+# Node modules
+node_modules
+
+# Build artifacts
+dist
+
+# Temporary files
+*.tmp
+*.temp
+
+# Logs
+logs
+*.log
+
+# Editor and system files
+.editorconfig
+*.swp
+*.swo
+*.swn
+*~ 
+.vscode
+.DS_Store

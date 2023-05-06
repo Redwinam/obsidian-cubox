@@ -1,0 +1,9 @@
+{
+  "id": "obsidian-cubox",
+  "name": "Obsidian Cubox",
+  "version": "1.0.0",
+  "description": "Share notes to Cubox using the provided API.",
+  "author": "Redwinam",
+  "minAppVersion": "0.9.22",
+  "main": "dist/main.js"
+}
