@@ -1,7 +1,7 @@
 {
-  "id": "obsidian-cubox",
-  "name": "Obsidian Cubox",
-  "version": "1.0.0",
+  "id": "share-to-cubox",
+  "name": "Share to Cubox",
+  "version": "1.0.1",
   "description": "Share Obsidian notes to Cubox using the provided API.",
   "author": "Redwinam",
   "isDesktopOnly": false

@@ -55,7 +55,7 @@ const translations: { [key: string]: Translation } = {
     shareToCubox: "Share to Cubox",
     noActiveFile: "No active file to share.",
     enterApiKey: "Please enter your Cubox API key in the plugin settings.",
-    setting: "Obsidian Cubox Settings",
+    setting: "Share to Cubox Settings",
     settings: {
       apiKey: "Cubox API Key",
       defaultTags: "Default Tags (comma-separated)",
@@ -78,7 +78,7 @@ const translations: { [key: string]: Translation } = {
     shareToCubox: "分享到 Cubox",
     noActiveFile: "没有要分享的活动文件。",
     enterApiKey: "请在插件设置中输入您的 Cubox API 密钥。",
-    setting: "Obsidian Cubox 设置",
+    setting: "Share to Cubox 设置",
     settings: {
       apiKey: "Cubox API 密钥",
       defaultTags: "默认标签",
