@@ -116,12 +116,13 @@ class CuboxApi {
         delete (params as any).folder;
       }
 
-      const response = await fetch(this.apiKey, {
+      const response = await this.app.vault.request({
+        url: `https://cubox.pro/c/api/save/${this.settings.apiKey}`,
         method: "POST",
+        body: params,
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(params),
       });
   
       const responseBody = await response.json();
@@ -154,7 +155,7 @@ export default class CuboxPlugin extends Plugin {
     await this.loadSettings();
 
     this.addCommand({
-      id: "share-to-cubox",
+      id: "share-this",
       name: this.translation.shareToCubox,
       callback: () => this.shareToCubox(),
     });
@@ -189,8 +190,7 @@ export default class CuboxPlugin extends Plugin {
   
     const fileContent: string = await this.app.vault.read(activeFile);
 
-    const apiUrl = "https://cubox.pro/c/api/save/" + this.settings.apiKey;
-    const cuboxApi = new CuboxApi(apiUrl);
+    const cuboxApi = new CuboxApi(this.settings.apiKey);
     const title = activeFile.basename;
     const description = fileContent;
     const tags =

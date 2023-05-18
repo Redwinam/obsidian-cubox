@@ -1,6 +1,6 @@
 # Cubox Plugin for Obsidian
 
-Easily save and share your Obsidian notes to Cubox with just a few clicks.
+Easily save and share your Obsidian notes to Cubox ( [中国](https://cubox.pro/) | [International](https://cubox.cc/) ) with just a few clicks. Check out their  for more information.
 
 ## Features
 
@@ -23,12 +23,13 @@ Easily save and share your Obsidian notes to Cubox with just a few clicks.
 2. Click "Share to Cubox" to share the current note to your Cubox account.
 3. If you haven't configured your Cubox API key yet, you'll be prompted to enter it in the plugin settings.
 4. In the plugin settings, you can also configure default tags and a default folder for new memos.
+5. Support text content only, no more than 3000 words.
 
 ## Configuration
 
 To configure the plugin settings, go to the "Cubox Plugin for Obsidian" settings tab in Obsidian's settings:
 
-- API Key: Enter your Cubox API key. This is required to use the plugin.
+- API Key: Enter your Cubox API key, need to be enabled in Cubox settings/extensions ( [中国](https://cubox.pro/my/settings/extensions) | [International](https://cubox.cc/my/settings/extensions) ). This is required to use the plugin.
 - Default Tags: Enter default tags for new memos, separated by commas (e.g., "tag1, tag2, tag3"). If left empty, no tags will be added.
 - Default Folder: Enter the default folder for new memos. If left empty, no folder will be assigned.
 
