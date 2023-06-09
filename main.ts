@@ -1,4 +1,4 @@
-import { Plugin, TFile, Notice, PluginSettingTab, App, Setting, PluginManifest } from "obsidian";
+import { Plugin, TFile, Notice, PluginSettingTab, App, Setting, PluginManifest, requestUrl, moment } from "obsidian";
 
 interface CuboxPluginSettings {
   apiKey: string;
@@ -116,16 +116,16 @@ class CuboxApi {
         delete (params as any).folder;
       }
 
-      const response = await this.app.vault.request({
-        url: `https://cubox.pro/c/api/save/${this.settings.apiKey}`,
+      const response = await requestUrl({
+        url: `https://cubox.pro/c/api/save/${this.apiKey}`,
         method: "POST",
-        body: params,
+        body: JSON.stringify(params),
         headers: {
           "Content-Type": "application/json",
         },
       });
   
-      const responseBody = await response.json();
+      const responseBody = await response.json;
   
       if (responseBody.code === 200) {
         return { success: true };
@@ -146,7 +146,7 @@ export default class CuboxPlugin extends Plugin {
     super(app, manifest);
     this.settings = DEFAULT_SETTINGS;
 
-    const language = (navigator.language || "en").toLowerCase();
+    const language = moment.locale();
     this.translation = translations[language.startsWith("zh") ? "zh" : "en"];
   }
 
@@ -227,9 +227,7 @@ class CuboxSettingTab extends PluginSettingTab {
   display(): void {
     let { containerEl } = this;
     containerEl.empty();
-  
-    containerEl.createEl("h2", { text: this.plugin.translation.setting });
-  
+    
     new Setting(containerEl)
       .setName(this.plugin.translation.settings.apiKey)
       .setDesc(this.plugin.translation.settingDescriptions.apiKey)
